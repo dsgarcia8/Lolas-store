@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Product} from './product.model';
+//import { Product} from './product.model';
+import {Product} from './models/product.model'
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import { Product} from './product.model';
 })
 export class AppComponent {
   title = 'lola-store';
+  
+
+  imgParent = 'https://w3schools.com/howto/img_avatar.png'
   img = 'https://source.unsplash.com/random/300x200'
   name = 'Daniela'
   age = 23
@@ -27,6 +31,10 @@ export class AppComponent {
 
   toggleButton(){
     this.btnDisabled = !this.btnDisabled;
+  }
+
+  onLoaded(img: string){
+    console.log('log padre', img)
   }
 
   increaseAge(){
@@ -54,37 +62,4 @@ export class AppComponent {
   onRegister(){
     console.log(this.register)
   }
-  products: Product[] = [
-    {
-      name: 'Perls Diadem',
-      price: 15,
-      image: './assets/images/hair.jpeg',
-      category: 'all',
-    },
-    {
-      name: 'Handmade masks',
-      price: 5,
-      image: './assets/images/mask.jpeg'
-    },
-    {
-      name: 'White handmade necklace',
-      price: 12,
-      image: './assets/images/necklace.jpeg'
-    },
-    {
-      name: 'Handmade Jewerly set',
-      price: 23,
-      image: './assets/images/necklace2.jpeg'
-    },
-    {
-      name: 'Scrunchies set',
-      price: 6,
-      image: './assets/images/scrunchies.jpeg'
-    },
-    {
-      name: 'Lolas Scrunchie',
-      price: 2,
-      image: './assets/images/scrunchie2.jpeg'
-    }
-  ]
 }

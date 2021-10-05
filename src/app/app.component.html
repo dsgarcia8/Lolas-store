@@ -1,6 +1,8 @@
-<h1>Lola's Store</h1>
-<hr>
-<h2>Formulario</h2>
+<!-- <p><input type="text" [(ngModel)]="imgParent"></p>
+<app-img (loaded)="onLoaded($event)" [img]="imgParent"></app-img> -->
+<app-nav></app-nav>
+<app-products></app-products>
+<!-- <hr>
 <form (ngSubmit)="onRegister()" #myForm="ngForm" >
   <div class="input-group">
     <label for="name">Name</label>
@@ -18,15 +20,8 @@
     <p>Error Messages</p>
   </div>
   <button [disabled]="myForm.invalid" type="submit">Register</button>
-</form>
-<hr>
-<div class="products--grid">
-  <div *ngFor="let product of products">
-    <img width="250" [src]="product.image" alt="image">
-    <h2>$ {{product.price}}</h2>
-    <p>{{product.name}}</p>
-  </div>
-</div>
+</form> -->
+
 
 <!-- <h1>*ngfor</h1>
 <button (click)="addName()">Add name</button>

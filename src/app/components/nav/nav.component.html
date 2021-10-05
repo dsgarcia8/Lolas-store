@@ -1,0 +1,45 @@
+<div class="show-mobile">
+    <div>
+        <button (click)="toggleMenu()">
+            <img width="35" src="./assets/images/menu.png" alt="menu">
+        </button>
+        <a href="">
+            <img width="100" src="./assets/images/logo.jpeg" alt="logo">
+        </a>
+        <a href="">
+            <img width="30" src="./assets/images/cart.svg" alt="cart">  
+        </a>
+    </div>
+    <div class="side-menu" [class.active]="activeMenu">
+        <button (click)="toggleMenu()">Close</button>
+        <ul>
+            <li><a href="">All</a></li>
+            <li><a href="">Hair</a></li>
+            <li><a href="">Jewerly</a></li>
+        </ul>
+    </div>
+</div>
+<div class="hide-mobile">
+    <div>
+        <nav>
+            <a class="logo" href="">
+                <img width="50" src="./assets/images/logo.jpeg" alt="menu">
+            </a>
+            <ul>
+                <li><a href="">All</a></li>
+                <li><a href="">Hair</a></li>
+                <li><a href="">Jewerly</a></li>
+            </ul>
+        </nav>
+        <div class="info">
+            <div class="account">
+                lolasinfo@lolas.com
+            </div>
+            <div>
+                <a href="">
+                    <img width="30" src="./assets/images/cart.svg" alt="cart">       
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
